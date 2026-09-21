@@ -35,7 +35,7 @@ export default function BlogPortal({ motion }: { motion: boolean }) {
           <p className="mono blog-eyebrow">INSIDE THE DECISIONS.</p>
           <h2 id="blog-title"><span className="blog-line"><span>SAME KIT.</span></span><span className="blog-line"><span>DIFFERENT</span></span><span className="blog-line"><span><em>GAME.</em></span></span></h2>
         </div>
-        <div className="blog-editor-note"><span className="blog-note-number" aria-hidden="true">01↗</span><p>The core route. The alliance split. The ideas that still need testing.</p><p>Our working HYPERDRIVE strategy, straight from the team.</p><span className="mono">STRATEGY / KIT / PRACTICE</span></div>
+        <div className="blog-editor-note"><span className="blog-note-number" aria-hidden="true">01↗</span><p>Four cores. The Starburst call. Two robots with clear jobs.</p><p>Step through our working opening sequence, from the first grip to the alliance handoff.</p><span className="mono">CORES / STARBURST / ALLIANCE</span></div>
       </div>
       <a className="blog-launch" href="/season-plan"><span><small className="mono">GET INTO IT</small><strong>OPEN THE FIELD NOTES</strong></span><span className="blog-launch-arrow"><ArrowUpRight aria-hidden="true" /></span></a>
       <div className="blog-running-type mono" aria-hidden="true">READ THE GAME. MAKE THE CALL. REPEAT. <span>✳</span> READ THE GAME. MAKE THE CALL. REPEAT.</div>

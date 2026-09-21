@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { ArrowDown, ArrowLeft, ArrowUpRight, Crosshair, MoveUpRight } from 'lucide-react';
 import './season-plan.css';
 import PlanMotion from './plan-motion';
+import GameBreakdown from './game-breakdown';
 
 export const metadata: Metadata = {
   title: 'Field Notes: Same Kit. Different Game. | DaVinci 027',
@@ -96,6 +97,7 @@ export default function SeasonPlan() {
         <div className="plan-section-head mono"><span>01 / GAME PLAN</span><span>HYPERDRIVE</span></div>
         <div className="plan-heading-row"><h2 id="strategy-title">THINK.<br /><em>THEN MOVE.</em></h2><p>The advantage has to come from execution. This is the sequence we want to rehearse, with the four-core unlock still marked for a rulebook check.</p></div>
         <div className="strategy-grid">{strategy.map((item) => <article key={item.number}><span className="mono">{item.number} / 04</span><h3>{item.title}</h3><p>{item.detail}</p><span className="strategy-arrow" aria-hidden="true">↗</span></article>)}</div>
+        <GameBreakdown />
       </section>
 
       <section className="plan-section plan-robot" id="robot" aria-labelledby="robot-title">

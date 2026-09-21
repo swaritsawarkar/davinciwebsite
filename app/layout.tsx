@@ -1,12 +1,13 @@
 import type { Metadata } from 'next';
-import { Funnel_Display, Geist_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
-const display = Funnel_Display({
+const display = localFont({
+  src: './fonts/funnel-display.woff2',
   variable: '--font-display',
-  subsets: ['latin'],
-  weight: ['400', '500', '600', '700', '800'],
+  weight: '400 800',
+  display: 'swap',
 });
-const mono = Geist_Mono({ variable: '--font-mono', subsets: ['latin'] });
+const mono = localFont({ src: './fonts/geist-mono.woff2', variable: '--font-mono', weight: '100 900', display: 'swap' });
 export const metadata: Metadata = {
   title: 'DaVinci 027 — Seven minds. Zero ordinary.',
   description:

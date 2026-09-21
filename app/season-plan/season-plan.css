@@ -219,3 +219,48 @@
   .plan-cursor { display: block; }
   .plan-page.has-plan-cursor, .plan-page.has-plan-cursor * { cursor: none !important; }
 }
+
+/* An interactive reading aid for the proposed opening, not a field diagram. */
+.game-breakdown { margin-top: 56px; border: 1px solid #ffffff3b; }
+.game-breakdown-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 18px 24px; border-bottom: 1px solid #ffffff3b; color: #b9b9c3; font-size: 10px; }
+.game-breakdown-top span:first-child { color: #ff41b7; }
+.game-breakdown-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.game-board { padding: clamp(22px, 3.5vw, 54px); background: #121219; background-image: linear-gradient(#ffffff05 1px, transparent 1px), linear-gradient(90deg, #ffffff05 1px, transparent 1px); background-size: 32px 32px; border-right: 1px solid #ffffff3b; }
+.game-counter { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
+.game-counter > span { color: #b9b9c3; font-size: 10px; }
+.game-counter strong { font-size: clamp(58px, 6vw, 92px); letter-spacing: -.075em; line-height: 1; font-variant-numeric: tabular-nums; }
+.game-counter small { color: #858590; font-size: .33em; letter-spacing: -.04em; margin-left: 8px; }
+.game-core-row { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin: 32px 0; }
+.game-core { text-align: center; min-width: 0; }
+.game-core > span { display: grid; place-items: center; aspect-ratio: 1; border: 1px dashed #737384; color: #858590; font-size: clamp(28px, 4vw, 54px); transition: background .3s, transform .45s cubic-bezier(.16, 1, .3, 1), color .3s; }
+.game-core.is-placed > span { background: #ff41b7; color: #0b0b0f; border: 1px solid #ff41b7; transform: rotate(90deg); }
+.game-core small { display: block; font-size: 9px; color: #b9b9c3; padding-top: 12px; }
+.game-starburst { border-top: 1px solid #ffffff3b; padding: 26px 0; display: flex; align-items: center; gap: 22px; }
+.game-starburst-icon { display: block; font-size: clamp(56px, 6vw, 90px); line-height: 1; color: #858590; transition: transform .7s cubic-bezier(.16, 1, .3, 1), color .3s; }
+.game-starburst.is-ready .game-starburst-icon { color: #ff41b7; transform: rotate(135deg); }
+.game-starburst .mono { color: #b9b9c3; font-size: 9px; }
+.game-starburst strong { display: block; font-size: clamp(25px, 3vw, 44px); letter-spacing: -.05em; line-height: 1.2; }
+.game-starburst p { color: #b9b9c3; font-size: 13px; margin-top: 7px; }
+.game-board-note { color: #a6a5b2; font-size: 10px; line-height: 1.65; max-width: 380px; }
+.game-call { display: flex; flex-direction: column; padding: clamp(22px, 3.5vw, 54px); }
+.game-call-copy > .mono { color: #ff41b7; font-size: 10px; }
+.game-call h3 { font-size: clamp(32px, 3.7vw, 58px); line-height: .98; letter-spacing: -.055em; margin: 22px 0; }
+.game-call-copy > p { color: #b9b9c3; line-height: 1.6; font-size: 14px; min-height: 90px; }
+.game-alliance { margin: 26px 0; }
+.game-alliance > div { padding: 16px 0; border-top: 1px solid #ffffff28; }
+.game-alliance dt { color: #b9b9c3; font-size: 9px; margin-bottom: 7px; }
+.game-alliance dd { margin: 0; font-size: 14px; line-height: 1.5; }
+.game-controls { display: flex; gap: 10px; margin-top: auto; }
+.game-controls button { min-height: 52px; border: 1px solid #ff41b7; background: transparent; color: #ff41b7; font: 11px var(--font-mono), monospace; display: flex; align-items: center; justify-content: center; gap: 12px; padding: 14px 18px; }
+.game-controls .game-next { background: #ff41b7; color: #0b0b0f; flex: 1; justify-content: space-between; }
+.game-controls button:disabled { opacity: .45; }
+.game-controls button:focus-visible { outline: 3px solid #f4f4f6; outline-offset: 4px; }
+.game-controls button:not(:disabled):hover { background: #f4f4f6; color: #0b0b0f; border-color: #f4f4f6; }
+.game-controls-note { display: block; color: #858590; font-size: 8px; margin-top: 15px; }
+@media (max-width: 800px) {
+  .game-breakdown-grid { grid-template-columns: 1fr; }
+  .game-board { border-right: 0; border-bottom: 1px solid #ffffff3b; }
+  .game-core-row { max-width: 440px; }
+  .game-call-copy > p { min-height: 0; }
+  .game-breakdown-top { padding: 18px 22px; }
+}
