@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
+import GameLauncher from './game-launcher';
 const display = localFont({
   src: './fonts/funnel-display.woff2',
   variable: '--font-display',
@@ -19,12 +20,12 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      {/* Browser video extensions add their own body classes before React starts. */}
       <body
         suppressHydrationWarning
         className={`${display.variable} ${mono.variable}`}
       >
         {children}
+        <GameLauncher />
       </body>
     </html>
   );

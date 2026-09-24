@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm install --prefix hyperdrive --no-audit --no-fund && npm run build --prefix hyperdrive && next build",
     "start": "next start",
     "typecheck": "tsc --noEmit"
   },
